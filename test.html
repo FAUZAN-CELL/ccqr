@@ -5,29 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#118eea" />
 <title>Pemindai Kode QR</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 <script type="text/javascript" src="llqr.js"></script>
 <script type="text/javascript" src="qr.js"></script>
 </head>
 
-<body style="margin:0;padding:0;font-family:sans-serif;background:#2c3e50;">
-<div id="main">
-<div id="mainbody">
-<div style="position:fixed;width:100%;height:60px;display:flex;z-index:99;">
-<div style="margin:auto 15px;color:#fff">
-<button style="width:100%;height:100%;border:0;color:#fff;outline:none;background:none;" onclick="back();">
+<body>
+<div class="scanner">
+<div class="left">
+<button class="bck" onclick="back();">
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
 </button>
 </div>
-<div style="color:#fff;font-family:sans-serif;font-weight:bold;font-size:16px;text-align:center;margin:auto;">Pindai untuk Masuk</div>
-<div style="margin:auto 15px;color:#fff">
-<button style="width:100%;height:100%;border:0;color:#fff;outline:none;background:none;" onclick="info();">
-<svg style="transform: rotate(45deg);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16"><path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/></svg>
+<div class="title">Pindai untuk Masuk</div>
+<div class="right">
+<button class="bck" onclick="info();">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16"><path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/></svg>
 </button>
 </div>
 </div>
-<div style="overflow:hidden;position:fixed;bottom:0;width:100%;z-index:97;">
-<div style="margin:auto;width:100%;display:flex;"><img style="width:60px;margin:auto;margin-right:10px;margin-bottom:10px;" src="./wifi.png" alt=""></div>
+<div class="menu">
+<div class="wifi"><img src="./wifi.png" alt=""></div>
 <div class="row">
 <h3>Pemindai kode QR</h3>
 <div class="button">
@@ -42,15 +40,17 @@
 </div>
 <div style="height: 10px;"></div>
 </div>
-</div>
-</div>
 <div style="padding-top: 6px; height: 24px; background: rgb(226, 226, 226);">
 <div style="text-align: center;">Powered by FAUZAN-CELL</div>
 </div>
 </div>
 
 <center>
+<div id="main">
+<div id="mainbody">
 <div class="camera" id="outdiv"></div>
+</div>
+</div>
 <div id="footer" class="credit">
 <a id="creditme" href="https://cloudcenter-cc.blogspot.com">Kode QR</a><br>Powered by <a href="http://www.webqr.com">webqr.com</a>
 </div>
