@@ -50,20 +50,20 @@ body {
     z-index: 97;
 }
 
-.wifi {
+.menu .wifi {
     margin: auto;
     width: 100%;
     display: flex;
 }
 
-.wifi img {
+.menu .wifi img {
     width: 60px;
     margin: auto;
     margin-right: 10px;
     margin-bottom: 10px;
 }
 
-.row {
+.menu .row {
     padding: 5%;
     border-radius: 20px 20px 0 0;
     width: 90%;
@@ -71,22 +71,22 @@ body {
     background: #fff;
 }
 
-h3 {
+.menu .row h3 {
     margin: auto;
     margin-bottom: 10px;
 }
 
-.button {
+.menu .row .button {
     width: 100%;
     display: flex;
 }
 
-.button img {
+.menu .row. .button img {
     width: 30px;
     margin: auto;
 }
 
-.btn {
+.menu .row .button .btn {
     width: 48%;
     height: 50px;
     margin: auto;
@@ -97,15 +97,15 @@ h3 {
     display: flex;
 }
 
-.btn:nth-child(1) {
+.menu .row .button .btn:nth-child(1) {
     margin-left: 0;
 }
 
-.btn:nth-child(2) {
+.menu .row .button .btn:nth-child(2) {
     margin-right: 0;
 }
 
-.btn .title {
+.menu .row .button .btn .title {
     margin: auto;
     margin-left: 0;
 }
