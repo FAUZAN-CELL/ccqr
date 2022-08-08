@@ -5,7 +5,7 @@ body {
     background: #fff;
 }
 
-.qr {
+.scanner {
     position: fixed;
     width: 100%;
     height: 60px;
@@ -14,7 +14,7 @@ body {
     z-index: 99;
 }
 
-.qr .title {
+.scanner .title {
     color: #fff;
     font-family: sans-serif;
     font-weight: bold;
@@ -23,13 +23,13 @@ body {
     margin: auto;
 }
 
-.qr .left {
+.scanner .left {
     margin: auto 15px;
     color: #fff
 }
 
-.qr .left .bck,
-.qr .right .bck {
+.scanner .left .bck,
+.scanner .right .bck {
     width: 100%;
     height: 100%;
     border: 0;
@@ -38,12 +38,12 @@ body {
     background: none;
 }
 
-.qr .right {
+.scanner .right {
     margin: auto 15px;
     color: #fff
 }
 
-.qr .right svg {
+.scanner .right svg {
     transform: rotate(45deg);
 }
 
