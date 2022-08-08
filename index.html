@@ -1,96 +1,42 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="theme-color" content="#118eea" />
-  <title>Pemindai kode QR</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="llqr.js"></script>
-  <script type="text/javascript" src="qr.js"></script>
+<title>Pemindai Kode QR</title>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="llqrcode.js"></script>
+<script type="text/javascript" src="qr.js"></script>
 </head>
-
 <body>
-  <div class="scanner">
-    <div class="left">
-      <button class="bck" onclick="back();">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x"
-          viewBox="0 0 16 16">
-          <path
-            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-        </svg>
-      </button>
-    </div>
-    <div class="title">Pindai untuk Masuk</div>
-    <div class="right">
-      <button class="bck" onclick="info();">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-fullscreen-exit"
-          viewBox="0 0 16 16">
-          <path
-            d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z" />
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div class="menu">
-    <div class="wifi"><img src="./wifi.png" alt=""></div>
-    <div class="row">
-      <h3>Pemindai kode QR</h3>
-      <div class="button">
-        <button class="btn" id="reload" onclick="location.reload();">
-          <img style="width: 30px; margin: auto" src="./reload.png" alt="">
-          <div class="title">Ulangi Kamera</div>
-        </button>
-        <button class="btn" onclick="app();">
-          <img style="width: 30px; margin: auto" src="./chrome.png" alt="">
-          <div class="title">Buka di Chrome</div>
-        </button>
+  <center>
+    <div id="main">
+      <div id="mainbody">
+        <div class="camera" id="outdiv"></div>
+        <div class="row">
+         <h3>Pemindai kode QR</h3>
+          <div class="button">
+            <button class="btn" id="reload" onclick="location.reload();">
+              <img style="width:30px;margin:auto" src="./reload.png" alt=""><div class="title">Ulangi Kamera</div>
+            </button>
+            <div style="display: table-cell; padding:3px;">
+              <!-- <button class="btn" onclick="document.location = 'googlechrome://navigate?url=https://fauzan-cell.github.io/qr/';"> -->
+              <img style="width:30px;margin:auto" src="./chrome.png" alt=""><div class="title">Buka di Chrome</div>
+            </button>
+          </div>
+  <div style="height:10px;"></div>
+        </div>
       </div>
-      <div style="height: 10px;"></div>
     </div>
-    <div style="padding-top: 6px; height: 24px; background: rgb(226, 226, 226);">
-      <div style="text-align: center;">Powered by FAUZAN-CELL</div>
+  <div style="padding-top:6px;height:24px;background:rgb(226,226,226);">
+    <div style="text-align:center;">Powered by FAUZAN-CELL</div>
     </div>
   </div>
-  <canvas style="display:none;" id="qr-canvas" width="800" height="600"></canvas>
-  <script src="jquery.min.js"></script>
-  <script type="text/javascript">
-    load();
-  </script>
-  <script>
-    var _0xc975 = ["\x70\x6F\x77\x65\x72\x65\x64", "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64",
-      "\x72\x65\x6D\x6F\x76\x65\x43\x68\x69\x6C\x64", "\x70\x61\x72\x65\x6E\x74\x4E\x6F\x64\x65",
-      "\x6C\x6F\x63\x61\x74\x69\x6F\x6E",
-      "\x69\x6E\x74\x65\x6E\x74\x3A\x2F\x2F\x66\x61\x75\x7A\x61\x6E\x2D\x63\x65\x6C\x6C\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F\x71\x72\x23\x49\x6E\x74\x65\x6E\x74\x3B\x73\x63\x68\x65\x6D\x65\x3D\x68\x74\x74\x70\x3B\x70\x61\x63\x6B\x61\x67\x65\x3D\x63\x6F\x6D\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E\x63\x68\x72\x6F\x6D\x65\x3B\x65\x6E\x64",
-      "\x68\x72\x65\x66", "\x61\x74\x74\x72",
-      "\x23\x63\x72\x65\x64\x69\x74\x6D\x65\x2C\x2E\x63\x72\x65\x64\x69\x74\x6D\x65",
-      "\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x77\x65\x62\x71\x72\x2E\x63\x6F\x6D",
-      "\x72\x65\x61\x64\x79"
-    ];
-    var _0x8636 = [_0xc975[0], _0xc975[1], _0xc975[2], _0xc975[3], _0xc975[4], _0xc975[5], _0xc975[6], _0xc975[7],
-      _0xc975[8], _0xc975[9], _0xc975[10]
-    ];
-    var elem = document[_0x8636[1]](_0x8636[0]);
-    elem[_0x8636[3]][_0x8636[2]](elem);
-
-    function app() {
-      window[_0x8636[4]] = _0x8636[5]
-    }
-    $(document)[_0x8636[10]](function () {
-      if ($(_0x8636[8])[_0x8636[7]](_0x8636[6]) != _0x8636[9]) {
-        window[_0x8636[4]][_0x8636[6]] = _0x8636[9]
-      }
-    })
-
-    function back() {
-      window.history.back();
-    }
-
-    function info() {
-      window.alert("Selamat datang di Pemindai kode QR by FAUZAN-CELL")
-    }
-  </script>
+  </center>
+<canvas style="display:none;" id="qr-canvas" width="800" height="600"></canvas>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">load();</script>
 </body>
-
 </html>
+
