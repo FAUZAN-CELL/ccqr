@@ -42,6 +42,18 @@ body {
     transform: rotate(45deg);
 }
 
+.camera {
+    width: 100%;
+}
+
+.camera video {
+    position: fixed;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 80%;
+}
+
 .menu {
     overflow: hidden;
     position: fixed;
