@@ -98,7 +98,7 @@ img {
     margin: auto;
 }
 
-.menu .row .button .btn {
+.btn {
     width: 48%;
     height: 50px;
     margin: auto;
@@ -109,15 +109,15 @@ img {
     display: flex;
 }
 
-.menu .row .button .btn:nth-child(1) {
+.btn:nth-child(1) {
     margin-left: 0;
 }
 
-.menu .row .button .btn:nth-child(2) {
+.btn:nth-child(2) {
     margin-right: 0;
 }
 
-.menu .row .button .btn .title {
+.btn .title {
     margin: auto;
     margin-left: 0;
 }
