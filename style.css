@@ -61,20 +61,11 @@ body {
 }
 
 .credit a {
+    color: #118eea;
     text-decoration: none;
-    color:#20a8d8;
-}
-
-@font-face {
-    font-family: 'fontello';
-    src: url('./font/fontello.eot?14907215');
-    src: url('./font/fontello.eot?14907215#iefix') format('embedded-opentype'),
-    url('./font/fontello.woff?14907215') format('woff'),
-    url('./font/fontello.ttf?14907215') format('truetype'),
-    url('./font/fontello.svg?14907215#fontello') format('svg');
     font-weight: normal;
-    font-style: normal;
-    }
+    text-shadow: none;
+}
 
 .menu {
     overflow: hidden;
