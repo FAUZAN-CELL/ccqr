@@ -60,13 +60,13 @@ body {
     z-index: 97;
 }
 
-.menu .wifi {
+.wifi {
     margin: auto;
     width: 100%;
     display: flex;
 }
 
-.menu .wifi img {
+.wifi img {
     width: 60px;
     margin: auto;
     margin-right: 10px;
