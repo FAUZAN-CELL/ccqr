@@ -63,8 +63,7 @@ body {
 .credit a {
     color: #118eea;
     text-decoration: none;
-    font-weight: normal;
-    font-style: bold;
+    font-weight: bold;
 }
 
 .menu {
