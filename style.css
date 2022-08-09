@@ -60,12 +60,12 @@ body {
     text-align: center;
 }
 
-/* .credit a {
+.credit a {
     color: #118eea;
     text-decoration: none;
     font-weight: bold;
     text-shadow: none;
-} */
+}
 
 .menu {
     overflow: hidden;
