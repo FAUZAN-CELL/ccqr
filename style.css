@@ -37,7 +37,7 @@ body {
 }
 
 .alert svg {
-    transform: rotate(45deg);
+    /* transform: rotate(45deg); */
 }
 
 .camera {
