@@ -5,16 +5,15 @@ body {
     background: #fff;
 }
 
-.qr {
+#header {
     position: fixed;
     width: 100%;
     height: 60px;
     display: flex;
-    /* background: #118eea; */
     z-index: 99;
 }
 
-.qr .title {
+#header .title {
     color: #fff;
     font-family: sans-serif;
     font-weight: bold;
@@ -53,20 +52,6 @@ body {
     min-height: 80%;
 }
 
-.credit {
-    padding-top: 6px;
-    height: 24px;
-    background: rgb(226, 226, 226);
-    text-align: center;
-}
-
-.credit a {
-    color: #118eea;
-    text-decoration: none;
-    font-weight: bold;
-    text-shadow: none;
-}
-
 .menu {
     overflow: hidden;
     position: fixed;
@@ -86,6 +71,11 @@ body {
     margin: auto;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+img {
+    width: 30px;
+    margin: auto;
 }
 
 .row {
@@ -130,21 +120,16 @@ h3 {
     margin-left: 0;
 }
 
-img {
-    width: 30px;
-    margin: auto;
+#footer {
+    padding-top: 6px;
+    height: 24px;
+    background: rgb(226, 226, 226);
+    text-align: center;
 }
 
-/* a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+#footer a {
+    color: #118eea;
     text-decoration: none;
-} */
-
-/* a:hover {
-    background: #ddd;
-    color: black;
-} */
+    font-weight: bold;
+    text-shadow: none;
+}
