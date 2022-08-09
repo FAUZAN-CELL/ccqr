@@ -86,7 +86,7 @@ body {
     margin-bottom: 10px;
 }
 
-.menu .row .button {
+.button {
     width: 100%;
     display: flex;
 }
