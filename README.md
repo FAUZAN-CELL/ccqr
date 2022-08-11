@@ -5,7 +5,7 @@
 
 1. Tambahkan button di login.html
 ```html
-<button onclick="window.location='https://fauzan-cell.github.io/qr';">Kode QR</button>
+<button onclick="window.location='https://fauzan-cell.github.io/qr';">QR Code</button>
 ```
 2. Tambahkan script berikut di MikroTik via Terminal.
 ```
