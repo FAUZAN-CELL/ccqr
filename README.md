@@ -1,5 +1,5 @@
 # qr
-## Pemindai kode QR untuk Masuk Hotspot MikroTik
+## QR Code Scanner for Login Hotspot MikroTik
 
 ### Cara pakai
 
