@@ -11,7 +11,7 @@
 ```
 /ip hotspot walled-garden ip
 
-add action=accept comment="Pemindai kode QR" disabled=no dst-host=fauzan-cell.github.io
+add action=accept comment="QR Code Scanner" disabled=no dst-host=fauzan-cell.github.io
 ```
 
 ### Powered by FAUZAN-CELL
